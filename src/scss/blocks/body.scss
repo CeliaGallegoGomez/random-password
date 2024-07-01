@@ -10,7 +10,7 @@ body {
   min-height: 100vh;
   color: var(--text-color);
   background-color: black;
-  font-family: 'DM Mono', monospace;
+  font-family: 'Montserrat',sans-serif;
   color: white;
 }
 
@@ -21,6 +21,8 @@ body {
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
+  background-color: purple;
+  border-radius: 24px;
 }
 @media screen and (min-width: 768px) {
   .password-generator {
@@ -31,13 +33,12 @@ body {
 .password {
   height: 60px;
   width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: 8px;
   border: none;
   outline: none;
-  border-radius: 0.5rem;
+  border-radius: 19px;
   color: inherit;
-  background-color: var(--primary-color);
-  box-shadow: 0 4px 4px var(--primary-shadow);
+  background:linear-gradient(blue,white) ;
   text-align: center;
   font-size: 0.9rem;
   font-family: inherit;
