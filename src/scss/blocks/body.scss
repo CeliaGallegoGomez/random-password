@@ -1,89 +1,12 @@
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin: 0;
-  color: var(--text-color);
-  background-color: black;
-  font-family: 'Montserrat',sans-serif;
-  color: white;
-}
-
-.password-generator {
-
-  padding: 16px;
-  width: 95%;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: purple;
-  border-radius: 24px;
-}
-@media screen and (min-width: 768px) {
-  .password-generator {
-    width: 75%;
-  }
-}
-
-.password {
-  height: 60px;
-  width: 100%;
-  margin-bottom: 8px;
-  border: none;
-  outline: none;
-  border-radius: 19px;
-  color: inherit;
-  text-align: center;
-  background-color: inherit;
-  font-size:16px;
-  font-family: inherit; 
-}
-@media screen and (min-width: 768px) {
-  .password {
-    font-size: 1.25rem;
-  }
-}
-.range-label {
-  display: block;
-  letter-spacing: 4px;
-  margin-bottom: 1rem;
-}
-.range-container {
-  display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: 60px;
-  width: 100%;
-  padding: 1.25rem;
-  background-color: var(--primary-color);
-  box-shadow: 0 4px 4px var(--primary-shadow);
-  border-radius: 0.5rem;
-  font-size: 1.25rem;
-  margin-bottom: 2rem;}
-
-  .range-input {
-    height: 3px;
-    width: 80%;
-    accent-color: var(--accent-color);
-  }
-  .button {
-    height: 60px;
-    width: 100%;
-    border: none;
-    color: inherit;
-    background-color: var(--cta-color);
-    box-shadow: 0 4px 4px var(--primary-shadow);
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    letter-spacing: 4px;
-    cursor: pointer;
-    transition: transform 0.2s, background-color 0.2s;
-  }
-  .button:hover {
-    transform: scale(0.95);
-    background-color: var(--cta-color-hover);
-  }
+  flex-direction: column;
+  text-align: center;
+  width: 375px;
+  height: 812px;
+  background-color: #00252E;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
