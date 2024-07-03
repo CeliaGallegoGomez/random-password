@@ -4,18 +4,18 @@ import '../scss/styles.scss';
 const passwordCharacters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234567890!@#$%^&*()_+-={}[]:;<>,.?/';
 
 const passwordElement = document.getElementById('password');
-const inputElement = document.getElementById('input');
-const passwordLengthElement = document.getElementById('characters');
-const buttonElement = document.getElementById('button');
+const rangeElement = document.getElementById('range');
+const textLengthElement = document.getElementById('characters');
+const buttonElement = document.getElementById('button--password');
 
 const lengthValue = event => {
-  passwordLengthElement.textContent = passwordGeneratorElement.value;
+  textLengthElement.textContent = passwordGeneratorElement.value;
 };
-inputElement.addEventListener('input', lengthValue);
+rangeElement.addEventListener('range', lengthValue);
 
 const randomPassword = () => {
   let newPassword = '';
-  for (let i = 0; i < inputElement.value; i++) {
+  for (let i = 0; i < rangeElement.value; i++) {
     newPassword += passwordCharacters.charAt(Math.floor(Math.random() * passwordCharacters.length));
   }
   return newPassword;
