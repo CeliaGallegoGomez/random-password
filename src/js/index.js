@@ -1,33 +1,28 @@
 // El styles lo importamos aquí, ya se carga después al compilar todo
 import '../scss/styles.scss';
 
-document.addEventListener("DOMContentLoaded", () => {
-    const passwordInput = document.getElementById("password");
-    const rangeInput = document.getElementById("range");
-    const lengthText = document.getElementById("length-text");
-    const generateButton = document.getElementById("generate-password");
-  
-    const generatePassword = (length) => {
-      const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+~`|}{[]:;?><,./-=";
-      let password = "";
-      for (let i = 0; i < length; i++) {
-        const randomIndex = Math.floor(Math.random() * charset.length);
-        password += charset[randomIndex];
-      }
-      return password;
-    };
-  
-    rangeInput.addEventListener("input", (event) => {
-      const length = event.target.value;
-      lengthText.textContent = length;
-    });
-  
-    generateButton.addEventListener("click", () => {
-      const length = rangeInput.value;
-      const newPassword = generatePassword(length);
-      passwordInput.value = newPassword;
-    });
-  
-    
-    passwordInput.value = generatePassword(rangeInput.value);
-  });
+const passwordCharacters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234567890!@#$%^&*()_+-={}[]:;<>,.?/';
+
+const passwordElement = document.getElementById('password');
+const inputElement = document.getElementById('input');
+const passwordLengthElement = document.getElementById('characters');
+const buttonElement = document.getElementById('button');
+
+const lengthValue = event => {
+  passwordLengthElement.textContent = passwordGeneratorElement.value;
+};
+inputElement.addEventListener('input', lengthValue);
+
+const randomPassword = () => {
+  let newPassword = '';
+  for (let i = 0; i < inputElement.value; i++) {
+    newPassword += passwordCharacters.charAt(Math.floor(Math.random() * passwordCharacters.length));
+  }
+  return newPassword;
+};
+
+const createButton = () => {
+  passwordElement.value = randomPassword();
+};
+
+buttonElement.addEventListener('click', createButton);
