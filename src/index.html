@@ -5,16 +5,17 @@
     <!-- PON UN FAVICON!!! -->
     <link rel="icon" type="image/svg+xml" href="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- CAMBIA EL TITLE!!! -->
-    <title>Vite Template</title>
+    <title>Random Password Generator</title>
   </head>
   <body>
     <h1>RANDOM PASSWORD GENERATOR</h1>
     <div class="password-generator">
       <label id="label" class="label" for="input">Length: <span id="characters"></span></label>
-      <span>4</span>
+      <div class="range-container">
+        <span>4</span>
       <input class="input" type="range" min="4" max="32" name="input" id="input" value="0" />
       <span>32</span>
+      </div>
     </div>
     <input id="password" type="text" class="password" placeholder="P4$5W0RD" />
     <button class="button" id="button" value="">Generate Password</button>
